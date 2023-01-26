@@ -128,3 +128,35 @@ p{
     rotate: -1.01deg;
 }    
 
+/*
+
+Alriks css för improvements flytta upp de till klasserna senare!
+
+*/
+
+.message-card{
+    width:fit-content
+}
+
+.message-par{
+    display: inline-block;
+}
+
+#messageDiv{
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+#text-input{
+    height: 8rem;
+    resize: horizontal;
+    max-width: 75%;
+}
+
+#input-container{
+    min-height: 18rem;
+}
+
+#text-button:focus,#text-button:active  {
+    outline: .5rem solid white;
+    color:white
+}

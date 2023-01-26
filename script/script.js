@@ -75,6 +75,7 @@ onValue(ref(db, '/'), (snapshot) => {
     messageDiv.prepend(messageOutput);
     //Tar bort meddelanden som man klickar på
     messageOutput.addEventListener('click', ()=>{
+      if(confirm("ta bort meddelandet?"))  // confirmbox ifall de trycker ok så körs remove  -Alrik He
       remove(ref(db, `${childKey}`));
     });
 
