@@ -77,17 +77,26 @@ onValue(ref(db, '/'), (snapshot) => {
       remove(ref(db, `${childKey}`));
     });
 
+    //username in messageCard
+    const usernamePar = document.createElement('p');
+    messageOutput.appendChild(usernamePar);
+    usernamePar.classList.add("username-par");
+    //message in messageCard
     const messagePar = document.createElement('p');
     messageOutput.appendChild(messagePar);
+    messagePar.classList.add("message-par");
+
     const timestampText = document.createElement('p');
     messageOutput.appendChild(timestampText);
+    timestampText.classList.add("time-stamp");
 
 
     timestampText.innerText = childData.time;
+    usernamePar.innerText = childData.name;
     messagePar.innerText = childData.message;
-    messageOutput.classList.add("messageCard");
+    
 
-    messagePar.innerText = childData.name + ": " + childData.message;
+    /* messagePar.innerText = childData.name + ": " + childData.message; */
 
   });
 });
