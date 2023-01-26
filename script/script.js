@@ -27,7 +27,7 @@ let timestamp;
 
 // input till databas
 const textInput = document.querySelector('#text-input');
-const usernameInput = document.querySelector('#username-input')
+const usernameInput = document.querySelector('#username')
 const textBtn = document.querySelector('#text-button');
 textBtn.addEventListener('click', createMessage);
 

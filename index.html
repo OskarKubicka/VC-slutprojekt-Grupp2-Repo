@@ -13,20 +13,17 @@
 
 <body>
     <main>
-        <article id="input-container">
-            <h3>Hej! Välj ett namn och skriv något snällt</h3>
-            <form>
-                <label for="username-input">Alias:</label>
-                <input id="username-input" placeholder="username"></input>
-                <label for="text-input">Tanke:</label>
-                <textarea id="text-input" placeholder="message"></textarea>
-                <button id="text-button" type="submit">Skicka</button>
-            </form>
-        </article>
+
+        <form>
+            <div id="message-input-header">
+                <input id="username" placeholder="username"></input>
+            </div>
+            <textarea id="text-input"></textarea>
+            <button id="text-button" type="submit">Skicka</button>
+        </form>
+          
         <div id="messageDiv"></div>
     </main>
 </body>
 
 </html>
-
-
