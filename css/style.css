@@ -119,6 +119,12 @@ p{
     text-align: right;
     
 }
-    
-    
+
+/* Contributor: Ignacio */
+.message-card:hover {
+    transform: scale(1.01);
+    background-color: #f79daf;
+    color: hsl(0, 0%, 95%);
+    rotate: -1.01deg;
+}    
 
