@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
-import { getDatabase, set, ref, push, update, onValue } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
+import { getDatabase, set, ref, push, update, onValue, remove } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -33,27 +33,18 @@ textBtn.addEventListener('click', createMessage);
 
 
 function createMessage(event) {
-  event.preventDefault();
-  getTimestamp();
+  //Kollar om användaren har fyllt i namn och ett meddelande
+  let isFormValid = document.getElementById('userForm').checkValidity();
+  if (!isFormValid) {
+    document.getElementById('userForm').reportValidity();
+  } else {
 
-  const userText = textInput.value;
-  const username = usernameInput.value;
+    event.preventDefault();
+    getTimestamp();
 
+    const userText = textInput.value;
+    const username = usernameInput.value;
 
-  //user måste ange ett username och ett message
-  if (username == "" && userText == "") {
-    alert("Username required & message-box cannot be empty")
-  }
-
-  else if (username == "") {
-    alert("Username required")
-  }
-
-  else if (userText == "") {
-    alert("Message-box cannot be empty")
-  }
-
-  else {
     //Pushar message till databasen
     push(ref(db, "/"), {
 
@@ -81,6 +72,10 @@ onValue(ref(db, '/'), (snapshot) => {
     console.log(childKey, childData);
     const messageOutput = document.createElement('div');
     messageDiv.prepend(messageOutput);
+    //Tar bort meddelanden som man klickar på
+    messageOutput.addEventListener('click', ()=>{
+      remove(ref(db, `${childKey}`));
+    });
 
     const messagePar = document.createElement('p');
     messageOutput.appendChild(messagePar);
