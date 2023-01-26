@@ -71,6 +71,7 @@ onValue(ref(db, '/'), (snapshot) => {
     const childData = childSnapshot.val();
     console.log(childKey, childData);
     const messageOutput = document.createElement('div');
+    messageOutput.classList.add("message-card");
     messageDiv.prepend(messageOutput);
     //Tar bort meddelanden som man klickar på
     messageOutput.addEventListener('click', ()=>{
