@@ -13,18 +13,18 @@
 
 <body>
     <main>
+        <article id="input-container">
+            <h3>Ange ett användarnamn samt ett meddelande som du vill skicka. För att ta bort meddelanden klickar du på
+                dem.</h3>
+            <form>
+                <label for="username-input">Alias:</label>
+                <input id="username-input" placeholder="username"></input>
+                <label for="text-input">Tanke:</label>
+                <textarea id="text-input" placeholder="message"></textarea>
+                <button id="text-button" type="submit">Skicka</button>
+            </form>
+        </article>
 
-        <form id="userForm">
-            <p>Ange ett användarnamn samt ett meddelande som du vill skicka. För att ta bort meddelanden klickar du helt enkelt bara på dem.</p>
-            <div id="message-input-header">
-                <input id="username" placeholder="username" required></input>
-            </div>
-
-            <textarea id="text-input" required></textarea>
-            <button id="text-button" type="submit">Skicka</button>
-
-        </form>
-          
         <div id="messageDiv"></div>
     </main>
 </body>
