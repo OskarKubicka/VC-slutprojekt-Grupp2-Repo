@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="#" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="./script/script.js" type="module" defer></script>
     <title>Document</title>
 </head>
@@ -14,14 +17,14 @@
 <body>
     <main>
         <article id="input-container">
-            <h3>Ange ett användarnamn samt ett meddelande som du vill skicka. För att ta bort meddelanden klickar du på
+            <h3 class="animate__animated animate__bounceInRight">Ange ett användarnamn samt ett meddelande som du vill skicka. För att ta bort meddelanden klickar du på
                 dem.</h3>
             <form id="userForm">
                 <label for="username-input">Alias:</label>
                 <input id="username-input" placeholder="username"></input>
                 <label for="text-input">Tanke:</label>
                 <textarea id="text-input" placeholder="message"></textarea>
-                <button id="text-button" type="submit">Skicka</button>
+                <button id="text-button" type="submit" class="animate__animated animate__bounce">Skicka</button>
             </form>
         </article>
 
